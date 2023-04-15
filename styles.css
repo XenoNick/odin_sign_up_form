@@ -42,12 +42,24 @@ body{
     color: white;
     display: inline-block;
     font-family: norsebold, sans-serif;
-    font-size: 7.5rem;
+    font-size: clamp(6rem, 8vw, 7.5rem);
     margin: 0;
 }
 .heading img{
     height: 8rem;
     width: 7.5rem;
+}
+#titleContainer > strong{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    color: white;
+}
+#titleContainer > strong span{
+    text-decoration: underline;
 }
 .mainContent{
     flex: 1 0 150px;
@@ -56,7 +68,8 @@ body{
     flex: 1 0 200px;
 }
 .mainContent:nth-child(2){
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.233);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.233);
+    flex: 1 1 0;
     z-index: 10;
 }
 .mainContent:nth-child(odd){
@@ -93,7 +106,7 @@ body{
     display: flex;
     justify-content: center;
     height: 100%;
-
+    position: relative;
 }
 #signUpForm > section{
     height: 100%;
@@ -105,10 +118,10 @@ body{
 label{
     text-transform: uppercase;
     white-space: nowrap;
-    font-size: clamp(.8rem, 2vw, 1.2rem)
+    font-size: clamp(.8rem, 2vw, 1.2rem);
 }
 label:focus-within{
-    color: red;
+    color: blue;
 }
 ul{
     padding: 0;
@@ -118,10 +131,60 @@ ul{
 }
 li{
     list-style: none;
-    margin: 50px 0;
+    margin: 50px 0 45px;
     width: 100%;
+    padding-left: clamp(10px, 5vw, 30px);
 }
 input{
+    appearance: none;
     width: 80%;
     display: block;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 5px;
+}
+input:focus{
+    outline: rgb(36, 36, 122) solid 2px;
+    border-radius: 2px;
+}
+
+.requiredInfo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+button{
+    height: 50px;
+    width: 250px;
+    padding: 8px 25px;
+    background-color: rgb(64, 88, 8);
+    border-radius: 7px;
+    border: 1px solid rgb(64, 88, 8);
+    font-size: 1.2rem;
+    color: white;
+}
+
+.signUpButtonContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.signUpButtonContainer > p{
+    font-size: 1.3rem;
+}
+.signUpButtonContainer > p > a{
+    color: rgb(64, 88, 8);
+    text-decoration: none;
+    font-weight: bold;
 }

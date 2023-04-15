@@ -15,6 +15,7 @@
             <img src="../images/odin-lined.png" alt="">
             <h1>ODIN</h1>
         </div>
+        <strong>Photo by <span>Halie West</span> on <span>Unsplash</span></strong>
     </section>
     <main id="formContainer">
         <div class="mainContent">
@@ -28,10 +29,11 @@
         <div class="mainContent">
             <form action="nowhere" id="signUpForm">
                 <section>
+                    <strong class="requiredInfo">Boxes marked with a "<span aria-label="required">*</span>" are required!</strong>
                     <ul>
                         <li>
-                            <label for="firstName">first name
-                                <input type="text" name="firstName" id="firstName">
+                            <label for="firstName"><span aria-label="required">*</span> first name
+                                <input type="text" name="firstName" id="firstName" required>
                             </label>
                         </li>
                         <li>
@@ -40,8 +42,8 @@
                             </label>
                         </li>
                         <li>
-                            <label for="password">password
-                                <input type="password" name="password" id="password">
+                            <label for="password"><span aria-label="required">*</span> password
+                                <input type="password" name="password" id="password" class="password" required>
                             </label>
                         </li>
                     </ul>
@@ -49,8 +51,8 @@
                 <section>
                     <ul>
                         <li>
-                            <label for="lastName">Last Name
-                                <input type="text" name="lastName" id="lastName">
+                            <label for="lastName"><span aria-label="required">*</span> Last Name
+                                <input type="text" name="lastName" id="lastName" required>
                             </label>
                         </li>
                         <li>
@@ -59,15 +61,20 @@
                             </label>
                         </li>
                         <li>
-                            <label for="confrimPass">confirm password
-                                <input type="password" name="confrimPass" id="confrimPass">
+                            <label for="confrimPass"><span aria-label="required">*</span> confirm password
+                                <input type="password" name="confrimPass" id="confrimPass" class="password" required>
                             </label>
                         </li>
                     </ul>
                 </section>
             </form>
         </div>
-        <div class="mainContent"></div>
+        <div class="mainContent">
+            <section class="signUpButtonContainer">
+                <button>Create Account</button>
+                <p>Already Have an account? <a href="nowhere">Log in</a></p>
+            </section>
+        </div>
     </main>
 </body>
 
