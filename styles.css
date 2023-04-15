@@ -72,9 +72,11 @@ body{
 }
 .description p{
     margin: 15px 0;
+    font-size: clamp(1.7rem, 3vw, 3rem);
+    text-align: center;
 }
 .description p:last-child::after{
-    --shila: 55px;
+    --shila: min(55px,max(30px,3.5vw));
     content: " ";
     background-image: url(./images/th-1005003564.jpg);
     background-size: var(--shila) var(--shila);
@@ -85,4 +87,41 @@ body{
     vertical-align: text-top;
     margin-left: 5px;
     border: 1px solid black;
+}
+
+#signUpForm{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+}
+#signUpForm > section{
+    height: 100%;
+    flex: 0 0 max(150px, 20vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: clamp(.8rem, 2vw, 1.2rem)
+}
+label:focus-within{
+    color: red;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+li{
+    list-style: none;
+    margin: 50px 0;
+    width: 100%;
+}
+input{
+    width: 80%;
+    display: block;
 }
