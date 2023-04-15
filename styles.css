@@ -6,7 +6,9 @@
     font-style: normal;
 
 }
-
+:root{
+    --forestGreen: forestgreen;
+}
 body{
     height: 100vh;
     margin: 0;
@@ -121,7 +123,7 @@ label{
     font-size: clamp(.8rem, 2vw, 1.2rem);
 }
 label:focus-within{
-    color: blue;
+    color: var(--forestGreen);
 }
 ul{
     padding: 0;
@@ -145,7 +147,7 @@ input{
     margin-top: 5px;
 }
 input:focus{
-    outline: rgb(36, 36, 122) solid 2px;
+    outline: rgb(64, 88, 8) solid 2px;
     border-radius: 2px;
 }
 
@@ -164,11 +166,18 @@ button{
     height: 50px;
     width: 250px;
     padding: 8px 25px;
-    background-color: rgb(64, 88, 8);
+    background-color: var(--forestGreen);
     border-radius: 7px;
-    border: 1px solid rgb(64, 88, 8);
+    border: 3px solid var(--forestGreen);
     font-size: 1.2rem;
     color: white;
+    cursor: pointer;
+}
+button:hover{
+    outline: rgb(64, 88, 8) solid 4px;
+}
+button:active{
+    outline: rgb(64, 88, 8) inset 4px;
 }
 
 .signUpButtonContainer{
@@ -184,7 +193,14 @@ button{
     font-size: 1.3rem;
 }
 .signUpButtonContainer > p > a{
-    color: rgb(64, 88, 8);
+    color: var(--forestGreen);
     text-decoration: none;
     font-weight: bold;
+}
+
+.validate:invalid{
+    outline: red;
+}
+.validate:valid{
+    outline: green;
 }
