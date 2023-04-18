@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="app2.js" defer></script>
     <title>Sign up!</title>
 </head>
 
@@ -27,23 +28,26 @@
             </div>
         </div>
         <div class="mainContent">
-            <form action="nowhere" id="signUpForm">
+            <form action="nowhere" id="signUpForm" method="post">
                 <section>
                     <strong class="requiredInfo">Boxes marked with a "<span aria-label="required">*</span>" are required!</strong>
                     <ul>
                         <li>
                             <label for="firstName"><span aria-label="required">*</span> first name
-                                <input type="text" name="firstName" id="firstName" required>
+                                <input type="text" name="firstName" id="firstName" required class="validate">
+                                <span class="errorMessage"></span>
                             </label>
                         </li>
                         <li>
                             <label for="email">email
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" class="validate">
+                                <span class="errorMessage"></span>
                             </label>
                         </li>
                         <li>
                             <label for="password"><span aria-label="required">*</span> password
-                                <input type="password" name="password" id="password" class="password" minlength="8" required>
+                                <input type="password" name="password" id="password" class="password validate" minlength="8" required>
+                                <span class="errorMessage"></span>
                             </label>
                         </li>
                     </ul>
@@ -52,17 +56,20 @@
                     <ul>
                         <li>
                             <label for="lastName"><span aria-label="required">*</span> Last Name
-                                <input type="text" name="lastName" id="lastName" required>
+                                <input type="text" name="lastName" id="lastName" class="validate" required>
+                                <span class="errorMessage"></span>
                             </label>
                         </li>
                         <li>
                             <label for="phoneNum">phone number
-                                <input type="tel" name="phoneNum" id="phoneNum">
+                                <input type="tel" name="phoneNum" id="phoneNum" class="validate">
+                                <span class="errorMessage"></span>
                             </label>
                         </li>
                         <li>
                             <label for="confrimPass"><span aria-label="required">*</span> confirm password
-                                <input type="password" name="confrimPass" id="confrimPass" class="password" required>
+                                <input type="password" name="confrimPass" id="confrimPass" minlength="8" class="password validate" required>
+                                <span class="errorMessage"></span>
                             </label>
                         </li>
                     </ul>
